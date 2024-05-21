@@ -150,7 +150,7 @@ const SideBar = () => {
                 width={80}
                 height={100}
                 src={
-                  "https://www.sibinfotech.com/digital-marketing-services-in-dallas/header/google-logo-new.webp"
+                  "https://www.sibinfotech.com/digital-marketing-services-in-mumbai/header/google-logo-new.webp"
                 }
                 alt="google-logo"
               />

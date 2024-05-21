@@ -28,7 +28,7 @@ const SeoServices = () => {
       discription:
         "Our off-page SEO services are designed to help you improve your online visibility, increase your website's ranking on search engines, and drive targeted traffic to your website. Our team of experts stays up-to-date with the latest off-page SEO trends and best practices to ensure that we deliver results that exceed your expectations.",
       discription_2:
-        "The profitable results of SEO tools can be only devoured by any business if they choose and invest in a reliable Off-page SEO company. At SIB Infotech we make sure that your brand acquires the top rankings with our services that are the best in Dallas. We are amongst the top SEO companies in Dallas.",
+        "The profitable results of SEO tools can be only devoured by any business if they choose and invest in a reliable Off-page SEO company. At SIB Infotech we make sure that your brand acquires the top rankings with our services that are the best in mumbai. We are amongst the top SEO companies in mumbai.",
     },
     {
       id: "e-commerce-seo",
@@ -99,7 +99,7 @@ const SeoServices = () => {
             <h2 className="font-bold font-redhat text-[27px] md:text-4xl">
               Begin Your SEO Journey With Best SEO Company in{" "}
               <br className="max-lg:hidden" />
-              Dallas, to Grow Your Business Online
+              mumbai, to Grow Your Business Online
             </h2>
             <a
               href="#contact"

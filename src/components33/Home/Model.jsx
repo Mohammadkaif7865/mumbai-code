@@ -9,7 +9,7 @@ const Model = ({ isModalOpen, setIsModalOpen }) => {
     companyName: "",
     websiteUrl: "",
     email: "",
-    fromWhere: "Dallas",
+    fromWhere: "mumbai",
   });
 
   

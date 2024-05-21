@@ -4,19 +4,19 @@ import React from "react";
 const Services = () => {
   const data = [
     {
-      gif: "https://www.sibinfotech.com/digital-marketing-services-in-dallas/startup.gif",
+      gif: "https://www.sibinfotech.com/digital-marketing-services-in-mumbai/startup.gif",
       title: "Digital Marketing",
     },
     {
-      gif: "https://www.sibinfotech.com/digital-marketing-services-in-dallas/line-chart.gif",
+      gif: "https://www.sibinfotech.com/digital-marketing-services-in-mumbai/line-chart.gif",
       title: "Search Engine Optimization",
     },
     {
-      gif: "https://www.sibinfotech.com/digital-marketing-services-in-dallas/click.gif",
+      gif: "https://www.sibinfotech.com/digital-marketing-services-in-mumbai/click.gif",
       title: "PPC Management",
     },
     {
-      gif: "https://www.sibinfotech.com/digital-marketing-services-in-dallas/monitor.gif",
+      gif: "https://www.sibinfotech.com/digital-marketing-services-in-mumbai/monitor.gif",
       title: "Graphic Desgining",
     },
   ];

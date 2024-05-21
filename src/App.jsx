@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route
-            path="/digital-marketing-services-in-dallas"
+            path="/digital-marketing-services-in-mumbai"
             element={<HomePage />}
           />
         </Routes>

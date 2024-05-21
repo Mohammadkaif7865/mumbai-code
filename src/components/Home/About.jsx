@@ -3,7 +3,7 @@ import HeroForm from "./HeroForm";
 
 const About = () => {
   return (
-    <div className="about">
+    <div id="about" className="about">
       <div className="lg:hidden w-[90%] mx-auto">
         <HeroForm oneline={true} />
       </div>
@@ -15,7 +15,7 @@ const About = () => {
                 className="m-auto"
                 width={50}
                 height={50}
-                src={"/portfolio.png"}
+                src={"https://www.sibinfotech.com/digital-marketing-services-in-mumbai/portfolio.png"}
                 alt="portfolio"
               />
             </div>
@@ -33,7 +33,7 @@ const About = () => {
                 className="m-auto"
                 width={50}
                 height={50}
-                src={"/projects.png"}
+                src={"https://www.sibinfotech.com/digital-marketing-services-in-mumbai/projects.png"}
                 alt="projects"
               />
             </div>
@@ -51,7 +51,7 @@ const About = () => {
                 className="m-auto"
                 width={50}
                 height={50}
-                src={"/people.png"}
+                src={"https://www.sibinfotech.com/digital-marketing-services-in-mumbai/people.png"}
                 alt="people"
               />
             </div>
@@ -88,7 +88,7 @@ const About = () => {
                   className="w-full"
                   width={400}
                   height={500}
-                  src={"/aboutLeft.jpg"}
+                  src={"https://www.sibinfotech.com/digital-marketing-services-in-mumbai/aboutLeft.jpg"}
                   alt="about"
                 />
               </div>

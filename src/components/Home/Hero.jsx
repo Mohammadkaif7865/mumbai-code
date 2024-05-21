@@ -4,23 +4,23 @@ import HeroForm from "./HeroForm";
 const Hero = () => {
   const images = [
     {
-      img: "https://www.sibinfotech.com/digital-marketing-services-in-dallas/banner/logo/best-website-deigning-ana-development-company-in-india.svg",
+      img: "https://www.sibinfotech.com/digital-marketing-services-in-mumbai/banner/logo/best-website-deigning-ana-development-company-in-india.svg",
       alt: "best-website-deigning-ana-development-company-in-mumbai.svg",
     },
     {
-      img: "https://www.sibinfotech.com/digital-marketing-services-in-dallas/banner/logo/best-design-comapnies-in-india.svg",
+      img: "https://www.sibinfotech.com/digital-marketing-services-in-mumbai/banner/logo/best-design-comapnies-in-india.svg",
       alt: "best-design-comapnies-in-mumbai.svg",
     },
     {
-      img: "https://www.sibinfotech.com/digital-marketing-services-in-dallas/banner/logo/facebook-reviews.svg",
+      img: "https://www.sibinfotech.com/digital-marketing-services-in-mumbai/banner/logo/facebook-reviews.svg",
       alt: "facebook-reviews.svg",
     },
     {
-      img: "https://www.sibinfotech.com/digital-marketing-services-in-dallas/banner/logo/search-engine-optimization-firm-in-delhi.svg",
+      img: "https://www.sibinfotech.com/digital-marketing-services-in-mumbai/banner/logo/search-engine-optimization-firm-in-delhi.svg",
       alt: "search-engine-optimization-firm-in-mumbai.svg",
     },
     {
-      img: "https://www.sibinfotech.com/digital-marketing-services-in-dallas/banner/logo/top-advertising-and-marketing-company (1).png",
+      img: "https://www.sibinfotech.com/digital-marketing-services-in-mumbai/banner/logo/top-advertising-and-marketing-company (1).png",
       alt: "/top-advertising-and-marketing-company-in-mumbai ",
     },
   ];
@@ -29,7 +29,7 @@ const Hero = () => {
     <div className="relative overflow-hidden bg-black/30 md:pb-10 pt-[50px] ">
       <video
         src={
-          "https://www.sibinfotech.com/digital-marketing-services-in-dallas/banner/banner-video.mp4"
+          "https://www.sibinfotech.com/digital-marketing-services-in-mumbai/banner/banner-video.mp4"
         }
         height={"400px"}
         autoPlay
@@ -108,7 +108,7 @@ const Hero = () => {
           height={200}
           className=" absolute w-full  object-cover z-[2] bottom-0 h-[30px]  md:h-[95px]"
           src={
-            "https://www.sibinfotech.com/digital-marketing-services-in-dallas/banner/bg-wave.svg"
+            "https://www.sibinfotech.com/digital-marketing-services-in-mumbai/banner/bg-wave.svg"
           }
           alt="bg-wave"
         />

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Modal } from "antd";
+import { toast } from "react-toastify";
 
 const Model = ({ isModalOpen, setIsModalOpen }) => {
   const [formData, setFormData] = useState({
@@ -8,33 +9,54 @@ const Model = ({ isModalOpen, setIsModalOpen }) => {
     companyName: "",
     websiteUrl: "",
     email: "",
-    fromWhere: "Digital marketing services in mumbai",
+    fromWhere: "mumbai",
   });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
+    // console.log("Form Data:", formData);
+    const data = {
+      name: formData.name,
+      company: formData.companyName,
+      website: formData.websiteUrl,
+      email: formData.email,
+      phone: formData.phoneNo,
+      fromWhere: formData.fromWhere,
+    };
+
+    // console.log(data);
 
     try {
-      const response = await fetch("/api/mailer", {
+      const API_TOKEN = "FgRCHG4OVv8Z1BcrjExKJcqspvTsUTCe";
+      const url = "https://www.sibinfotech.com/api/send-email";
+      const response = await fetch(url, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Authorization: API_TOKEN,
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(data),
       });
 
-      const responseData = await response.json();
-      console.log("Response:", responseData);
+      console.log(response.data);
+      if (response.status == 200) {
+        toast.success("Email Send Successfully!");
+        setIsModalOpen(false);
+        setFormData({
+          name: "",
+          companyName: "",
+          websiteUrl: "",
+          email: "",
+          phoneNo: "",
+        });
 
-      setFormData({
-        name: "",
-        companyName: "",
-        websiteUrl: "",
-        email: "",
-        phoneNo: "",
-      });
-      setIsModalOpen(false);
+        setTimeout(() => {
+          window.location.href = "https://sibinfotech.com/thanks";
+        }, 2000);
+      }
+      if (!response.status == 200) {
+        return toast.error("Somthing went wrong!");
+      }
     } catch (error) {
       console.error("Error:", error);
     }
@@ -71,7 +93,7 @@ const Model = ({ isModalOpen, setIsModalOpen }) => {
   return (
     <div>
       <Modal
-        visible={isModalOpen}
+        open={isModalOpen}
         onOk={handleSubmit}
         onCancel={handleCancel}
         footer={null}

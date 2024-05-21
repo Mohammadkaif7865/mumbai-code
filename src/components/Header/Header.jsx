@@ -4,9 +4,11 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { FaSquareArrowUpRight } from "react-icons/fa6";
 import { openSideBar } from "../sidebar/SideBar";
 import { IoMdMail } from "react-icons/io";
+import Model from "../Home/Model";
 
-const Header = ({ setIsModalOpen }) => {
+const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,7 +51,7 @@ const Header = ({ setIsModalOpen }) => {
                   height={71}
                   quality={100}
                   src={
-                    "https://www.sibinfotech.com/digital-marketing-services-in-dallas/header/logo.webp"
+                    "https://www.sibinfotech.com/digital-marketing-services-in-mumbai/header/logo.webp"
                   }
                   alt="logo"
                 />
@@ -60,7 +62,7 @@ const Header = ({ setIsModalOpen }) => {
                   height={71}
                   quality={100}
                   src={
-                    "https://www.sibinfotech.com/digital-marketing-services-in-dallas/header/logo.png"
+                    "https://www.sibinfotech.com/digital-marketing-services-in-mumbai/header/logo.png"
                   }
                   alt="logo"
                 />
@@ -83,7 +85,7 @@ const Header = ({ setIsModalOpen }) => {
                 height={25}
                 quality={100}
                 src={
-                  "https://www.sibinfotech.com/digital-marketing-services-in-dallas/header/google-logo-new.webp"
+                  "https://www.sibinfotech.com/digital-marketing-services-in-mumbai/header/google-logo-new.webp"
                 }
                 alt="google logo"
               />
@@ -135,6 +137,7 @@ const Header = ({ setIsModalOpen }) => {
           </div>
         </div>
       </div>
+      <Model isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
     </header>
   );
 };

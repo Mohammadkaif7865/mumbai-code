@@ -57,7 +57,7 @@ const Header = () => {
                     height={71}
                     quality={100}
                     src={
-                      "https://www.sibinfotech.com/digital-marketing-services-in-dallas/header/logo.webp"
+                      "https://www.sibinfotech.com/digital-marketing-services-in-mumbai/header/logo.webp"
                     }
                     alt="logo"
                   />
@@ -68,7 +68,7 @@ const Header = () => {
                     height={71}
                     quality={100}
                     src={
-                      "https://www.sibinfotech.com/digital-marketing-services-in-dallas/header/logo.png"
+                      "https://www.sibinfotech.com/digital-marketing-services-in-mumbai/header/logo.png"
                     }
                     alt="logo"
                   />
@@ -98,7 +98,7 @@ const Header = () => {
                     height={25}
                     quality={100}
                     src={
-                      "https://www.sibinfotech.com/digital-marketing-services-in-dallas/header/google-logo-new.webp"
+                      "https://www.sibinfotech.com/digital-marketing-services-in-mumbai/header/google-logo-new.webp"
                     }
                     alt="google logo"
                   />

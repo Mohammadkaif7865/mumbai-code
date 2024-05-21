@@ -15,10 +15,16 @@ const Footer = () => {
             Reserved.
           </p>
           <div className="text-[#ccc] flex gap-4 max-lg:mt-4 max-md:text-[14px] font-poppins ">
-            <a href={"https://www.sibinfotech.com/privacy-policy"}>
+            <a
+              target="_blank"
+              href={"https://www.sibinfotech.com/privacy-policy"}
+            >
               Privacy Policy
             </a>
-            <a href={"https://www.sibinfotech.com/terms-and-conditions"}>
+            <a
+              target="_blank"
+              href={"https://www.sibinfotech.com/terms-and-conditions"}
+            >
               Terms & Conditions
             </a>
           </div>

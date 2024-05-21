@@ -9,6 +9,7 @@ import { FaSquareArrowUpRight } from "react-icons/fa6";
 
 import { IoCloseSharp } from "react-icons/io5";
 import { Tooltip } from "antd";
+import Model from "../Home/Model";
 
 export const openSideBar = () => {
   document.querySelector("#sidebar").classList.remove("left-[-100%]");
@@ -19,8 +20,9 @@ export const closeSideBar = () => {
   document.querySelector("#sidebar").classList.add("left-[-100%]");
 };
 
-const SideBar = ({ setIsModalOpen }) => {
+const SideBar = () => {
   const [tooltipOpen, setTooltipOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleMouseEnter = (e) => {
     setTooltipOpen(e);
@@ -157,13 +159,14 @@ const SideBar = ({ setIsModalOpen }) => {
               width={80}
               height={100}
               src={
-                "https://www.sibinfotech.com/digital-marketing-services-in-dallas/header/google-logo-new.webp"
+                "https://www.sibinfotech.com/digital-marketing-services-in-mumbai/header/google-logo-new.webp"
               }
               alt="google-logo"
             />
           </div>
         </div>
       </div>
+      <Model isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
     </div>
   );
 };

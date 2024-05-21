@@ -12,7 +12,7 @@ const PpcMangement = () => {
                 className=""
                 width={500}
                 height={500}
-                src={"https://www.sibinfotech.com/digital-marketing-services-in-dallas/PremierBadge.svg"}
+                src={"https://www.sibinfotech.com/digital-marketing-services-in-mumbai/PremierBadge.svg"}
                 alt="PremierBadge"
               />
             </div>
@@ -21,7 +21,7 @@ const PpcMangement = () => {
                 className=" "
                 width={500}
                 height={500}
-                src={"https://www.sibinfotech.com/digital-marketing-services-in-dallas/meta-partner.jpg"}
+                src={"https://www.sibinfotech.com/digital-marketing-services-in-mumbai/meta-partner.jpg"}
                 alt="PremierBadge"
               />
             </div>
@@ -45,7 +45,7 @@ const PpcMangement = () => {
               className=""
               width={500}
               height={500}
-              src={"https://www.sibinfotech.com/digital-marketing-services-in-dallas/PremierBadge.svg"}
+              src={"https://www.sibinfotech.com/digital-marketing-services-in-mumbai/PremierBadge.svg"}
               alt="PremierBadge"
             />
           </div>
@@ -66,7 +66,7 @@ const PpcMangement = () => {
               className=" "
               width={500}
               height={500}
-              src={"https://www.sibinfotech.com/digital-marketing-services-in-dallas/meta-partner.jpg"}
+              src={"https://www.sibinfotech.com/digital-marketing-services-in-mumbai/meta-partner.jpg"}
               alt="PremierBadge"
             />
           </div>
@@ -96,7 +96,7 @@ const PpcMangement = () => {
               <img
                 width={100}
                 height={100}
-                src={"https://www.sibinfotech.com/digital-marketing-services-in-dallas/adwords.png"}
+                src={"https://www.sibinfotech.com/digital-marketing-services-in-mumbai/adwords.png"}
                 alt="adwords"
               />
             </div>
@@ -124,7 +124,7 @@ const PpcMangement = () => {
               <img
                 width={100}
                 height={100}
-                src={"https://www.sibinfotech.com/digital-marketing-services-in-dallas/facebook.png"}
+                src={"https://www.sibinfotech.com/digital-marketing-services-in-mumbai/facebook.png"}
                 alt="facebook"
               />
             </div>
@@ -137,7 +137,7 @@ const PpcMangement = () => {
                 className="absolute m-2 w-[calc(100%-16px)] object-cover h-[calc(100%-16px)]"
                 width={800}
                 height={800}
-                src={"https://www.sibinfotech.com/digital-marketing-services-in-dallas/ads-management.jpg"}
+                src={"https://www.sibinfotech.com/digital-marketing-services-in-mumbai/ads-management.jpg"}
                 alt="ads-management"
               />
             </div>
@@ -165,7 +165,7 @@ const PpcMangement = () => {
               <img
                 width={100}
                 height={100}
-                src={"https://www.sibinfotech.com/digital-marketing-services-in-dallas/instagram.png"}
+                src={"https://www.sibinfotech.com/digital-marketing-services-in-mumbai/instagram.png"}
                 alt="instagram"
               />
             </div>
@@ -192,7 +192,7 @@ const PpcMangement = () => {
               <img
                 width={100}
                 height={100}
-                src={"https://www.sibinfotech.com/digital-marketing-services-in-dallas/linkedin.png"}
+                src={"https://www.sibinfotech.com/digital-marketing-services-in-mumbai/linkedin.png"}
                 alt="linkedin"
               />
             </div>
