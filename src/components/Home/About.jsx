@@ -75,7 +75,7 @@ const About = () => {
             <h2 className="text-[27px] md:text-[36px] leading-tight md:leading-[50px] mt-8 font-redhat font-bold">
               Revamp Your Online Presence with the{" "}
               <span className="text-blue-500">
-                Best Digital Marketing Agency
+                Best Digital Marketing Company
               </span>
             </h2>
             <h3 className="font-bold text-[18px] md:text-[22px] font-redhat text-[#222] mt-2">
