@@ -1,4 +1,3 @@
-"use client";
 
 import React, { useEffect, useState } from "react";
 import { TiSocialFacebook } from "react-icons/ti";
@@ -10,15 +9,23 @@ import { FaSquareArrowUpRight } from "react-icons/fa6";
 import { IoCloseSharp } from "react-icons/io5";
 import { Tooltip } from "antd";
 import Model from "../Home/Model";
+import { useLocation } from "react-router-dom";
 
 export const openSideBar = () => {
   document.querySelector("#sidebar").classList.remove("left-[-100%]");
   document.querySelector("#sidebar").classList.add("left-0");
+  document.querySelector("#laypuotoverlay").classList.remove("hidden");
+  document.querySelector("#laypuotoverlay").classList.add("block");
 };
 export const closeSideBar = () => {
   document.querySelector("#sidebar").classList.remove("left-0");
   document.querySelector("#sidebar").classList.add("left-[-100%]");
+  document.querySelector("#laypuotoverlay").classList.remove("block");
+  document.querySelector("#laypuotoverlay").classList.add("hidden");
 };
+
+
+
 
 const SideBar = () => {
   const [tooltipOpen, setTooltipOpen] = useState(false);
@@ -76,11 +83,15 @@ const SideBar = () => {
       title: "YouTube",
     },
   ];
+  const location = useLocation();
+  useEffect(() => {
+    closeSideBar();
+  }, [location]);
 
   return (
     <div
       id="sidebar"
-      className={` transition-all duration-300 fixed top-0 left-[-100%] bg-white  p-8 min-h-screen max-md:w-full w-[355px] z-[99]`}
+      className={` transition-all duration-300 fixed top-0 left-[-100%] bg-white  p-8 min-h-screen max-md:w-full w-[355px] z-[100]`}
     >
       <div>
         <IoCloseSharp
