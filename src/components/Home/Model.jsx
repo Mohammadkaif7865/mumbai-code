@@ -3,28 +3,52 @@ import { Modal } from "antd";
 import { toast } from "react-toastify";
 
 const Model = ({ isModalOpen, setIsModalOpen }) => {
+  const option = [
+    "Website Design",
+    "Website Design",
+    "Website Development",
+    "Digital Marketing",
+    "PPC",
+    "SEO",
+    "SMO",
+    "Software Development",
+    "Graphic Design",
+    "Mobile App Development",
+    "Offshore Outsourcing",
+  ];
   const [formData, setFormData] = useState({
     name: "",
     phoneNo: "",
+    email: "",
     companyName: "",
     websiteUrl: "",
-    email: "",
-    fromWhere: "mumbai",
+    service: "",
+    message: "",
+    fromWhere: "DMS - Mumbai",
   });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log("Form Data:", formData);
     const data = {
       name: formData.name,
       company: formData.companyName,
-      website: formData.websiteUrl,
       email: formData.email,
+      website: formData.websiteUrl,
       phone: formData.phoneNo,
+      service: formData.service,
+      message: formData.message,
       fromWhere: formData.fromWhere,
     };
 
-    // console.log(data);
+    console.log(data);
 
     try {
       const API_TOKEN = "FgRCHG4OVv8Z1BcrjExKJcqspvTsUTCe";
@@ -44,10 +68,12 @@ const Model = ({ isModalOpen, setIsModalOpen }) => {
         setIsModalOpen(false);
         setFormData({
           name: "",
+          phoneNo: "",
+          email: "",
           companyName: "",
           websiteUrl: "",
-          email: "",
-          phoneNo: "",
+          service: "",
+          message: "",
         });
 
         setTimeout(() => {
@@ -62,32 +88,19 @@ const Model = ({ isModalOpen, setIsModalOpen }) => {
     }
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log("Form Data:", formData);
-  //   // Here you can send the form data to your backend or perform any other necessary action
-  //   // Reset the form data if needed
-  //   setFormData({
-  //     name: "",
-  //     companyName: "",
-  //     websiteUrl: "",
-  //     email: "",
-  //     phoneNo: "",
-  //   });
-  //   // Close the modal
-  //   setIsModalOpen(false);
-  // };
+  // console.log(data);
 
   const handleCancel = () => {
     setIsModalOpen(false);
+    setFormData({
+      name: "",
+      phoneNo: "",
+      email: "",
+      companyName: "",
+      websiteUrl: "",
+      service: "",
+      message: "",
+    });
   };
 
   return (
@@ -100,104 +113,125 @@ const Model = ({ isModalOpen, setIsModalOpen }) => {
         centered={true}
       >
         <div className="w-[100%] md:bg-white rounded-2xl md:p-6">
-          <h3 className="font-bold text-[24px] md:text-[32px] leading-tight text-center font-redhat">
+          <h3 className="max-md:mt-4 font-bold text-[24px] md:text-[32px] leading-tight text-center font-redhat">
             Ready to boost your leads?
           </h3>
-          <form onSubmit={handleSubmit} className="font-poppins">
-            <div className="w-full relative group mt-[25px]">
-              <input
-                type="text"
-                name="name"
-                id={"name3"}
-                inputMode="text"
-                required
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full  h-3 py-4 px-4 text-sm peer bg-transparent outline-none focus:border-blue-500 border-b border-[#999]"
-              />
-              <label
-                htmlFor={"name3"}
-                className="transform transition-all text-[#999] absolute top-0 left-0 h-full flex items-center pl-1 text-sm group-focus-within:text-xs peer-valid:text-xs group-focus-within:h-1/2 peer-valid:h-1/2 group-focus-within:-translate-y-[15px] peer-valid:-translate-y-full group-focus-within:pl-1 peer-valid:pl-1"
-              >
-                Name
-              </label>
+
+          <form
+            className="Hero_form text-[#999] font-poppins"
+            onSubmit={handleSubmit}
+          >
+            <div className={`grid  grid-cols-2 gap-4 `}>
+              <div class="user-box mt-[23px] ">
+                <input
+                  className=""
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  // Keyboard type for name
+                  inputMode="text"
+                />
+                <label htmlFor="name" className="">
+                  Name
+                </label>
+              </div>
+              <div class="user-box mt-[23px] ">
+                <input
+                  className=""
+                  type="text"
+                  name="companyName"
+                  value={formData.companyName}
+                  onChange={handleChange}
+                  required
+                  // Keyboard type for company name
+                  inputMode="text"
+                />
+                <label htmlFor="companyName" className="">
+                  Company Name
+                </label>
+              </div>
+            </div>
+            <div className={`grid  grid-cols-2 gap-4`}>
+              <div class="user-box mt-[23px] ">
+                <input
+                  className=""
+                  type="text"
+                  name="websiteUrl"
+                  value={formData.websiteUrl}
+                  onChange={handleChange}
+                  required
+                  // Keyboard type for name
+                  inputMode="text"
+                />
+                <label htmlFor="websiteUrl" className="">
+                  Website Url
+                </label>
+              </div>
+              <div class="user-box mt-[23px] ">
+                <input
+                  className=""
+                  type="text"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  // Keyboard type for company name
+                  inputMode="text"
+                />
+                <label htmlFor="email" className="">
+                  Email
+                </label>
+              </div>
             </div>
 
-            <div className="w-full relative group mt-[25px]">
-              <input
-                type="text"
-                name="companyName"
-                id={"companyname3"}
-                inputMode="text"
-                value={formData.companyName}
-                onChange={handleChange}
-                required
-                className="w-full  h-3 py-4 px-4 text-sm peer bg-transparent outline-none focus:border-blue-500 border-b border-[#999]"
-              />
-              <label
-                htmlFor={"companyname3"}
-                className="transform transition-all text-[#999] absolute top-0  left-0 h-full flex items-center pl-1 text-sm group-focus-within:text-xs peer-valid:text-xs group-focus-within:h-1/2 peer-valid:h-1/2 group-focus-within:-translate-y-[15px] peer-valid:-translate-y-full group-focus-within:pl-1 peer-valid:pl-1"
-              >
-                Company Name
-              </label>
+            <div className={`grid   grid-cols-2 gap-4`}>
+              <div class="user-box mt-[23px] ">
+                <input
+                  className=""
+                  type="tel"
+                  name="phoneNo"
+                  value={formData.phoneNo}
+                  onChange={handleChange}
+                  required
+                  // Keyboard type for phone number
+                  inputMode="tel"
+                />
+                <label htmlFor="phoneNo" className="">
+                  Phone No
+                </label>
+              </div>
+
+              {/* dropdown */}
+              <div className="mt-[23px] text-sm">
+                <select
+                  className=" mt-[2px] outline-none w-full relative border-b border-[#9b9b9b] pb-[7px] "
+                  name="service"
+                  value={formData.service}
+                  onChange={handleChange}
+                  required
+                >
+                  {option.map((option, index) => (
+                    <option className="w-full px-2" key={index} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
-            <div className="w-full relative group mt-[25px]">
-              <input
-                type="text"
-                name="websiteUrl"
-                id={"webUrl"}
-                inputMode="url"
-                value={formData.websiteUrl}
+            <div className="relative mb-2 mt-[22px]">
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Message"
+                value={formData.message}
                 onChange={handleChange}
-                required
-                className="w-full  h-3 py-4 px-4 text-sm peer bg-transparent outline-none focus:border-blue-500 border-b border-[#999]"
-              />
-              <label
-                htmlFor={"webUrl"}
-                className="transform transition-all text-[#999] absolute top-0 left-0 h-full flex items-center pl-1 text-sm group-focus-within:text-xs peer-valid:text-xs group-focus-within:h-1/2 peer-valid:h-1/2 group-focus-within:-translate-y-[15px] peer-valid:-translate-y-full group-focus-within:pl-1 peer-valid:pl-1"
-              >
-                Website Url
-              </label>
-            </div>
-            <div className="w-full relative group mt-[25px]">
-              <input
-                type="email"
-                name="email"
-                id={"email3"}
-                inputMode="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full  h-3 py-4 px-4 text-sm peer bg-transparent outline-none focus:border-blue-500 border-b border-[#999]"
-              />
-              <label
-                htmlFor={"email3"}
-                className="transform transition-all text-[#999] absolute top-0 left-0 h-full flex items-center pl-1 text-sm group-focus-within:text-xs peer-valid:text-xs group-focus-within:h-1/2 peer-valid:h-1/2 group-focus-within:-translate-y-[15px] peer-valid:-translate-y-full group-focus-within:pl-1 peer-valid:pl-1"
-              >
-                Email
-              </label>
+                className="w-full bg-white text-sm rounded border  border-[#9b9b9b] focus:border-blue-500   h-16 outline-none text-[#9b9b9b] py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out placeholder:text-[#9b9b9b]"
+              ></textarea>
             </div>
 
-            <div className="w-full relative group mt-[25px]">
-              <input
-                type="tel"
-                name="phoneNo"
-                id={"phoneNo3"}
-                inputMode="tel"
-                value={formData.phoneNo}
-                onChange={handleChange}
-                required
-                className="w-full  h-3 py-4 px-4 text-sm peer bg-transparent outline-none focus:border-blue-500 border-b border-[#999]"
-              />
-              <label
-                htmlFor={"phoneNo3"}
-                className="transform transition-all text-[#999] absolute top-0 left-0 h-full flex items-center pl-1 text-sm group-focus-within:text-xs peer-valid:text-xs group-focus-within:h-1/2 peer-valid:h-1/2 group-focus-within:-translate-y-[15px] peer-valid:-translate-y-full group-focus-within:pl-1 peer-valid:pl-1"
-              >
-                Phone No
-              </label>
-            </div>
-
-            <button className="py-3 rounded-xl bg-[#e31a20] mt-8 w-full font-poppins text-white text-[14px] md:text-[14px] font-bold">
+            <button className="py-2 rounded-xl bg-[#e31a20]  w-full  font-poppins text-white text-[16px] md:text-xl ">
               SEND REQUEST
             </button>
           </form>
